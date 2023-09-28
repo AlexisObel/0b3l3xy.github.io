@@ -37,15 +37,26 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
+<<<<<<< HEAD
+  name: Alexis Obel
+  email: example@domain.com # change to your email address
+=======
   name: Alexis Obel
   email: # change to your email address
+>>>>>>> 58e74c6fc7931be16973b1844b7646e7ef0056e9
   links:
     # The first element serves as the copyright owner's link
+<<<<<<< HEAD
+    #https://twitter.com/username # change to your twitter homepage
+    - https://github.com/AlexisObel # change to your github homepage
+=======
     - https://twitter.com/username # change to your twitter homepage
     - https://github.com/AlexisObel # change to your github homepage
+    - https://www.linkedin.com/in/alexis-o-403b30194/
+>>>>>>> 58e74c6fc7931be16973b1844b7646e7ef0056e9
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    
 
 google_site_verification: # fill in to your verification string
 
