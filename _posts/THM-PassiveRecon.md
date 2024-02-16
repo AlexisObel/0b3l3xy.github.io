@@ -2,7 +2,7 @@
 title: THM Passive Reconnaissance 
 date: 2024-01-13 02:02:00 +3
 categories: Try Hack Me 
-tags: [ ] # TAG names should always be lowercase 
+tags: [ Reconnaissance ] # TAG names should always be lowercase 
 ---
 
 # THM — PASSIVE RECONNAISSANCE
