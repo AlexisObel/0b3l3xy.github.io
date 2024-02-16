@@ -1,15 +1,14 @@
 ---
-title: THM Passive Reconnaissance 
-date: 2024-01-13 02:02:00 +3
-categories: Try Hack Me 
-tags: [ Reconnaissance ] # TAG names should always be lowercase 
+title: THM Passive Reconnaissance
+date: 2024-01-13 02:49:00 +3
+categories: THM
+tags: [Reconnaissance] # TAG names should always be lowercase
 ---
-
-# THM — PASSIVE RECONNAISSANCE
 
 Passive reconnaissance is all about gathering information about a target without directly interacting with the system and the people. In this room we will learn about the various tools and techniques that will be used to carry out passive reconnaissance as well as test our knowledge about it as we go along. Another reason why it is important to learn about it is because it is the first step in the cyber kill chain before hackers finally decide what weapons they will create and send to their target. It would be interesting to know how they do it without getting noticed.
 
 ## Passive versus Active recon
+
 Reconnaissance is all about gathering information about the target but those can be done by either directly interacting with the targets systems, network and people or doing it indirectly such that no one will even know or have evidence that you were gathering information. Active recon is where there is direct interaction whereas Passive is all about observing from a distance.
 
 Active reconnaissance involves direct interaction with a target system or network to gather information. This can include connecting to the company’s servers, engaging with the staff of the company, and scanning and enumerating the network.
@@ -29,18 +28,22 @@ Just by directly involving the IP address of the organization, it is evident tha
 Active because there is direct engagement with the members of the organization. They are aware that you are gathering information about their systems and network infrastructure. The whole point of passive recon is that no one is aware at all. Social engineering may not be known when it is happening, but they eventually realize it later on.
 
 ## Whois
+
 Whois is a request and response protocol which listens on TCP port 43.
 
 Whois can give us information on:
-* The registrar which the domain name was registered
-* Contact info of registrant: Name, organization, address, phone etc.
-* Creation, update, and expiration dates of the domain name
-* Name Server: Which server to ask to resolve the domain name?
+
+- The registrar which the domain name was registered
+- Contact info of registrant: Name, organization, address, phone etc.
+- Creation, update, and expiration dates of the domain name
+- Name Server: Which server to ask to resolve the domain name?
 
 A whois command was done for tryhackme.com as shown below:
+
 ```bash
 whois tryhackme.com
 ```
+
 It displays the name of the server used by tryhackme, updated and creation date of the domain name and other details tied to the domain tryhackme.com. The questions below also show more information that was found to do with tryhackme.com
 
 #### Q: When was TryHackMe.com registered? 20180705
@@ -50,17 +53,21 @@ It displays the name of the server used by tryhackme, updated and creation date 
 #### Q: Which company is TryHackMe.com using for name servers?cloudflare.com
 
 ## nslookup and dig
+
 nslookup — name server lookup
 
-It can be used to find the domain name of an IP address: 
-```
+It can be used to find the domain name of an IP address:
+
+```bash
 nslookup domain_name
 ```
 
 The command can be customized to find specifically IPv4 address with the option A or IPv6 address with the option AAAA:
-```
+
+```bash
 nslookup option domain_name server
 ```
+
 Other options include CNAME — Canonical Name, MX — Mail Servers, SOA — Start of Authority, TXT — txt records
 
 DNS servers are different for different companies, e.g., Cloudflare 1.1.1.1 and Google 8.8.8.8. These are public servers, but private servers can also be used.
@@ -72,14 +79,17 @@ dig — Domain Information Gropper is a more advance domain query tool compared 
 Dig can be used to find the IP address and also specify the type of DNS records that we are looking for.
 
 #### Q: Check the TXT records of thmlabs.com. What is the flag there?
+
 The “dig” command is short for “domain information groper” and is used to perform DNS lookups to obtain information about DNS zones, domain names, and IP addresses. The “thmlabs.com” is the domain name being queried. The “TXT” argument specifies the type of DNS record being requested. In this case, it is requesting the TXT record, which is a type of DNS record that allows domain owners to associate arbitrary text with a domain name.
 
 ## DNS dumpster
+
 It’s a free online search tool that enable’s one to get more detailed information about a Domain name that a simple dig or nslookup command cannot find. This information is displayed in a readable format.
 
 #### Q: Lookup tryhackme.com on DNS dumpster. What is one interesting subdomain that you would discover in addition to www and blog? Remote
 
 ## Shodan.io
+
 Through shodan you can learn a lot about a client’s network without connecting to it directly. You can also keep track of devices that have been exposed within an organization’s network.
 
 #### Q: According to Shodan.io, what is the 2nd country in the world in terms of the number of publicly accessible Apache servers? Germany
@@ -89,9 +99,3 @@ Through shodan you can learn a lot about a client’s network without connecting
 #### Q: Based on Shodan.io, what is the 3rd most common port used for nginx? 888
 
 In conclusion, we now understand how passive recon works and the tools that are used to carry it out. We have polished up on the fundamentals of passive recon. Kudos to us!
-
-
-
-
-
-
