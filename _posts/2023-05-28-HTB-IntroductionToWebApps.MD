@@ -5,6 +5,8 @@ categories: HTB
 tags: [Web Apps] # TAG names should always be lowercase
 ---
 
+In order to be able to secure web applications, an understanding of how web applications work, their architecture and vulnerabilites is important to be able to secure them effectively. In this post, I will demonstrate how I went about the labs in this module of HTB Academy.
+
 ## Front End Components
 
 ### HTML
