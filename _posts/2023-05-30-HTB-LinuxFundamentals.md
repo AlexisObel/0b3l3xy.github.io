@@ -1,6 +1,6 @@
 ---
 title: HTB Linux Fundamentals
-date: 2024-02-18 07:27:00 +3
+date: 2023-05-30 07:27:00 +3
 categories: HTB
 tags: [Linux] # TAG names should always be lowercase
 ---
