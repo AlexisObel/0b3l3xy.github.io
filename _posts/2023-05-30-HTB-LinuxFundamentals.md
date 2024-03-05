@@ -18,7 +18,7 @@ system's processor or type
 
 `uname -m`
 
-![Alt Text](/assets/imgs/uname.JPG)
+![Alt Text](/_site/assets/imgs/uname.JPG)
 
 **Q: What is the path to htb-student's home directory?** /home/htb-student
 
@@ -27,7 +27,7 @@ When you run the pwd command in a terminal or command prompt, it prints
 the full path of the current working directory, which is the directory that you are
 currently in. That’s how I was able to find the path.
 
-![Alt Text](/assets/imgs/pwd2.JPG)
+![Alt Text](/_site/assets/imgs/pwd2.JPG)
 
 **Q: What is the path to the htb-student's mail?** /var/mail/htb-student
 
@@ -48,7 +48,7 @@ binary file such as **/bin/bash, /bin/sh, /bin/zsh,** or **/bin/csh**. This indi
 shell is currently being used to interpret and execute commands entered into the
 terminal or command prompt.
 
-![Alt Text](/assets/imgs/echo.JPG)
+![Alt Text](/_site/assets/imgs/echo.JPG)
 
 **Q: Which kernel version is installed on the system? (Format: 1.22.3)** 4.15.0
 
@@ -60,7 +60,7 @@ When you run the uname -r command, it will output the kernel release of the
 operating system, which is a string of text that represents the version number of
 the currently running kernel.
 
-![Alt Text](/assets/imgs/uR.JPG)
+![Alt Text](/_site/assets/imgs/uR.JPG)
 
 **Q: What is the name of the network interface that MTU is set to 1500?** ens192
 
@@ -73,7 +73,7 @@ network interfaces on the system, including their IP addresses, netmasks, and
 other configuration details. The output will typically be divided into sections for
 each network interface.
 
-![Alt Text](/assets/imgs/if.JPG)
+![Alt Text](/_site/assets/imgs/if.JPG)
 
 ### Navigation
 
@@ -87,7 +87,7 @@ file permissions, owner, size, and modification date. The -a option makes the
 command display all files, including those whose names begin with a dot (which
 are hidden by default).
 
-![Alt Text](/assets/imgs/ls2.JPG)
+![Alt Text](/_site/assets/imgs/ls2.JPG)
 
 **Q: What is the index number of the "sudoers" file in the "/etc" directory?**
 147627
@@ -96,11 +96,11 @@ I first got into the /etc folder using the `cd /etc` command. I listed all the f
 including each file's inode number using `ls -i` command. I managed to find the sudoers
 file as shown below:
 
-![Alt Text](/assets/imgs/lsal2.JPG)
+![Alt Text](/_site/assets/imgs/lsal2.JPG)
 
 `ls -i sudoers`
 
-![Alt Text](/assets/imgs/lsi.JPG)
+![Alt Text](/_site/assets/imgs/lsi.JPG)
 
 ### Working with Files and Directories
 
@@ -118,7 +118,7 @@ most recently modified files or directories first. This is useful for quickly
 identifying the files or directories that have been recently modified or accessed
 in a directory.
 
-![Alt Text](/assets/imgs/lslt.JPG)
+![Alt Text](/_site/assets/imgs/lslt.JPG)
 
 **Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?**
 265293
@@ -131,7 +131,7 @@ When used with a filename, ls -i displays the inode number of the file or direct
 For example, the command ls -i shadow.bak will display the inode number of the
 file shadow.bak.
 
-![Alt Text](/assets/imgs/lsis2.JPG)
+![Alt Text](/_site/assets/imgs/lsis2.JPG)
 
 ### Find files and directories
 
@@ -155,7 +155,7 @@ to /dev/null, which discards them.
 
 `find /-type f -name *.conf -user root -size +25k -newermt 2020-03-03 ls -al {} \; 2>/dev/null `
 
-![Alt Text](/assets/imgs/lsall.JPG)
+![Alt Text](/_site/assets/imgs/lsall.JPG)
 
 __Q: What is the inode number of the "shadow.bak" file in the "/var/backups" directory?__
 265293
@@ -178,14 +178,14 @@ to /dev/null, which discards them.
 
 `find / -type f -name *.bak -exec ls -al {} \; 2>/dev/null`
 
-![Alt Text](/assets/imgs/lsall2.JPG)
+![Alt Text](/_site/assets/imgs/lsall2.JPG)
 
 __Q: Submit the full path of the "xxd" binary.__ /usr/bin/xxd
 
 The `which xxd` command is used to create a hex dump of a given file or standard input.
 To find the file location of xxd “which” is used before xxd.
 
-![Alt Text](/assets/imgs/xxd.JPG)
+![Alt Text](/_site/assets/imgs/xxd.JPG)
 
 ### File descriptors and redirections
 
@@ -195,7 +195,7 @@ The complete command specifies that a file is being looked for, with a name exte
 
 `find /type f -name *.log 2>/dev/null | wc -l `
 
-![Alt Text](/assets/imgs/log.JPG)
+![Alt Text](/_site/assets/imgs/log.JPG)
 
 __Q: How many total packages are installed on the target system?__ 737
 
@@ -204,12 +204,12 @@ along with their version numbers, descriptions, and other information. The
 output can be quite long, so I piped the output to a pager program as shown in
 the second screenshot.
 
-![Alt Text](/assets/imgs/dpkg.JPG)
+![Alt Text](/_site/assets/imgs/dpkg.JPG)
 
 The command `dpkg --list | grep ii | wc -l` outputs the total number of installed
 packages on your system.
 
-![Alt Text](/assets/imgs/dpkg2.JPG)
+![Alt Text](/_site/assets/imgs/dpkg2.JPG)
 
 ### Filter contents
 
@@ -225,7 +225,7 @@ connections. This can be particularly useful for network administrators who need
 to troubleshoot network issues or for security analysts who need to monitor
 network activity.
 
-![Alt Text](/assets/imgs/netstat.JPG)
+![Alt Text](/_site/assets/imgs/netstat.JPG)
 
 __Q: Determine what user the ProFTPd server is running under. Submit the username as
 the answer.__ Proftpd
@@ -234,9 +234,9 @@ the answer.__ Proftpd
 When executed without any options or arguments, the ps command shows a list
 of the processes associated with the current terminal session.
 
-![Alt Text](/assets/imgs/ps.JPG)
+![Alt Text](/_site/assets/imgs/ps.JPG)
 
-![Alt Text](/assets/imgs/ps2.JPG)
+![Alt Text](/_site/assets/imgs/ps2.JPG)
 
 __Q: Use cURL from your Pwnbox (not the target machine) to obtain the source code of
 the "https://www.inlanefreight.com" website and filter all unique paths of that domain.
@@ -259,7 +259,7 @@ mechanisms to provide a defense-in-depth approach to security. The output of
 the command shows all the unit files related to AppArmor, if any are installed on
 the system.
 
-![Alt Text](/assets/imgs/arm.JPG)
+![Alt Text](/_site/assets/imgs/arm.JPG)
 
 ### Task Scheduling
 
@@ -276,7 +276,7 @@ property for the syslog.service unit, which will indicate what kind of service i
 For example, it might show Type=simple, indicating that the service is a simple
 service that runs in the foreground.
 
-![Alt Text](/assets/imgs/sys2.JPG)
+![Alt Text](/_site/assets/imgs/sys2.JPG)
 
 That concludes the Linux fundamentals module on HTB, onto the next! &#x1F60A;
 

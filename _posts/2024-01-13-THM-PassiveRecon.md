@@ -82,7 +82,7 @@ Dig can be used to find the IP address and also specify the type of DNS records 
 
 The “dig” command is short for “domain information groper” and is used to perform DNS lookups to obtain information about DNS zones, domain names, and IP addresses. The “thmlabs.com” is the domain name being queried. The “TXT” argument specifies the type of DNS record being requested. In this case, it is requesting the TXT record, which is a type of DNS record that allows domain owners to associate arbitrary text with a domain name.
 
-![Example Image](/assets/imgs/avatar.jpg)
+![Example Image](/_site/assets/imgs/avatar.jpg)
 
 ## DNS dumpster
 
