@@ -18,7 +18,7 @@ system's processor or type
 
 `uname -m`
 
-![Alt Text](/_site/assets/imgs/uname.JPG)
+![Alt Text](_site/assets/imgs/uname.JPG)
 
 **Q: What is the path to htb-student's home directory?** /home/htb-student
 
